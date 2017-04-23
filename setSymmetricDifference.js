@@ -4,20 +4,20 @@ function setSymmetricDifference(a,b) {
   const symDiff = [];
   /*filter through the a array and
   push only what does not match in the b array*/
-  symDiff.push(a.filter(function(elem) {
+  a.filter(function(elem) {
     if (b.indexOf(elem) === -1) {
-      return elem
+      symDiff.push(elem)
     }
-  }));
+  });
   /*filter through the b array and
   push only what does not match in the a array*/
-  symDiff.push(b.filter(function(elem) {
+  b.filter(function(elem) {
     if (a.indexOf(elem) === -1) {
-      return elem
+      symDiff.push(elem);
     }
-  }));
+  });
 
-  return symDiff.join(",")
+  return symDiff
 }
 
 const a = [1, 2, 3, 4]
